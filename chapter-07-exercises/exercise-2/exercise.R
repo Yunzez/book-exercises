@@ -20,7 +20,7 @@ some_numbers<- all_number[2:5]
 
 
 # Create a vector `even` that holds the even numbers from 1 to 100
-even <-c(seq(0,100,2))
+even <-c(seq(2,100,2))
 even
 
 
@@ -37,14 +37,14 @@ prefix<-phone_numbers[0:3]
 
 # Create a vector `small` that has the values of `phone_numbers` that are 
 # less than or equal to 5
-
+small<- phone_numbers[phone_numbers <= 5]
 
 # Create a vector `large` that has the values of `phone_numbers` that are 
 # strictly greater than 5
-
+large<- phone_numbers[phone_numbers > 5]
 
 # Replace the values in `phone_numbers` that are larger than 5 with the number 5
-gsub(all(phone_numbers >5),5,phone_numbers)
-
+gsub(6:9,5,phone_numbers)
+replace(phone_numbers, phone_numbers>5, 5)
 # Replace every odd-numbered value in `phone_numbers` with the number 0
-
+replace(phone_numbers, phone_numbers%%2 == 0, 0)
