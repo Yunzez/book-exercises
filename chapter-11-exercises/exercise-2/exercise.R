@@ -12,7 +12,8 @@ library(fueleconomy)
 
 # Select the different manufacturers (makes) of the cars in this data set. 
 # Save this vector in a variable
-
+group_by(vehicles, make)
+makes <- select(vehicles, make)
 
 # Use the `distinct()` function to determine how many different car manufacturers
 # are represented by the data set
