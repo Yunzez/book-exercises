@@ -45,4 +45,9 @@ print(most_delay_dest)
 View(airports)
 
 # Which city was flown to with the highest average speed?
+flights %>% group_by(dest) %>% 
+  summarise(
+    speed = mean(distance/air_time, na.rm = TRUE)
+  ) %>% 
+  filter(speed == max(speed, na.rm = TRUE))
 
