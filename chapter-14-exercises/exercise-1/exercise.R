@@ -18,17 +18,17 @@ org_resource <- "/orgs/programming-for-data-science/repos"
 # Send a GET request to this endpoint (the `base_uri` followed by the 
 # `org_resource` path). Print the response to show that your request worked. 
 # (The listed URI will also allow you to inspect the JSON in the browser easily).
-
+a <- GET(paste0(base_uri,org_resource))
 
 # Extract the content of the response using the `content()` function, saving it
 # in a variable.
-
-
+a <- content(a)
+print(a)
 # Convert the content variable from a JSON string into a data frame.
-
-
+df <- fromJSON(a)
+View(df)
 # How many (public) repositories does the organization have?
-
+20
 
 # Now a second query:
 # Create a variable `search_endpoint` that stores the endpoint used to search 
