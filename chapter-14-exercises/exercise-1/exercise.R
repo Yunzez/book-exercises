@@ -13,7 +13,7 @@ base_uri <- 'https://api.github.com'
 # that will list _repos in an organization_. Then create a variable named
 # `org_resource` that stores the endpoint for the `programming-for-data-science`
 # organization repos (this is the _path_ to the resource of interest).
-org_resource <- 
+org_resource <- "/orgs/programming-for-data-science/repos"
 
 # Send a GET request to this endpoint (the `base_uri` followed by the 
 # `org_resource` path). Print the response to show that your request worked. 
