@@ -92,7 +92,9 @@ ggplot(data = diamonds) +
 
 # Take the scatter plot of price by carat data (colored by clarity) and add 
 # _facets_ based on the diamond's `color`
-
+ggplot(data = diamonds) +
+  geom_point(mapping = aes(x = carat, y =price, color = color))+
+  facet_wrap(~clarity)
 
 
 ## Saving Plots
