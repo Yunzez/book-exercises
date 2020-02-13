@@ -60,21 +60,26 @@ ggplot(data = diamonds_sample, mapping = aes(x = cut, y = carat))+
 
 # Draw a line plot (with line geometry) for `diamonds_sample`. The x-position 
 # should be mapped to carat, y-position to price, and color to cut.
-
+ggplot(data = diamonds_sample)+
+  geom_line(mapping = aes(x =carat , y = price, color = cut))
 
 # That's kind of messy. Try using `smooth` geometry instead.
+ggplot(data = diamonds_sample, mapping = aes(x =carat , y = price, color = cut))+
+  geom_smooth()
 
 
 # Draw a plot with column geometry (a bar chart), mapping the diamond's `cut` to 
 # the x-axis and `price` to the y-axis. Note that by default, column geometry 
 # will us the "sum" of all of the y-values, so that the chart is actually of the
 # TOTAL value of all of the diamonds of that cut!
-
+ggplot(data = diamonds_sample) +
+  geom_col(mapping = aes(x =carat , y = price))
 
 # Add an aesthetic property that will _fill_ each bar geometry based on the 
 # `clarity` of the diamonds. 
 # What kind of chart do you get?
-
+ggplot(data = diamonds_sample) +
+  geom_col(mapping = aes(x =carat , y = price, fill = clarity))
 
 
 # Draw a plot of the `diamonds_sample` data (price by carat), with both points 
