@@ -1,0 +1,12 @@
+name: diamondsgraph_demo
+title: diamondsgraph_demo
+username:
+account: yunzezhao
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1898051
+bundleId: 2848618
+url: https://yunzezhao.shinyapps.io/diamondsgraph_demo/
+when: 1583276316.47144
+asMultiple: FALSE
+asStatic: FALSE
